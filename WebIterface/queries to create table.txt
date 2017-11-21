@@ -1,0 +1,9 @@
+
+query to create customer table
+CREATE TABLE `smartmeter`.`customer` ( `cid` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(15) NOT NULL , `address` VARCHAR(45) NOT NULL , `mobile` VARCHAR(13) NOT NULL , `email` VARCHAR(20) NOT NULL , `password` VARCHAR(15) NOT NULL , PRIMARY KEY (`cid`));
+to create room table
+CREATE TABLE `smartmeter`.`room` ( `mno` VARCHAR(10) NOT NULL , `rno` VARCHAR(2) NOT NULL , `rprevreading` DOUBLE NULL , `rreading` DOUBLE NOT NULL ,FOREIGN KEY (mno) REFERENCES meter(meterno) ,PRIMARY KEY (`mno`, `rno`)) ENGINE = MyISAM
+to create meterrecords
+CREATE TABLE `smartmeter`.`meterrecords` ( `mrmno` VARCHAR(10) NOT NULL , `mrreading` DOUBLE NOT NULL,FOREIGN KEY (mrmno) REFERENCES meter(meterno) ) ENGINE = MyISAM;
+to create roomrecords
+CREATE TABLE `smartmeter`.`roomrecords` ( `rrmno` VARCHAR(10) NOT NULL , `rrrno` VARCHAR(2) NOT NULL , `rrreading` DOUBLE NOT NULL,FOREIGN KEY (rrmno) REFERENCES meter(meterno),FOREIGN KEY (rrrno) REFERENCES room(rno) ) ENGINE = MyISAM;

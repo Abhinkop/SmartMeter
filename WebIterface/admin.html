@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Administrator Login </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Enhance Required Form Fields with CSS3" />
+        <meta name="keywords" content="form, html5, css3, animated, transition, required, filter" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+		<script>
+		  function validateForm() {
+		  
+		  if( document.forms["af-form"]["password"].value == "" )
+   {
+     alert( "Please enter the password!" );
+     document.getElementById("input-fname").focus() ;
+     return false;
+   }
+		  }
+			
+			
+
+		</script>
+		
+		<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+		<!--[if lt IE 8]>
+			<style>
+				.af-wrapper{display:none;}
+				.ie-note{display:block;}
+			</style>
+		<![endif]-->
+		
+		
+		
+		
+		
+		
+		
+    </head>
+    <body>
+	
+	
+	
+	
+	
+	
+        <div class="container">
+			<header>
+				<span></span>
+				<h1>Login<span>!</span></h1>
+				<p></p>
+				<p class="ie-note">D'oh!</p>
+			</header>
+			
+			<section class="af-wrapper">
+	            <h3></h3>
+		        
+				<form class="af-form" method="post" action="./loginadmin.php" id="af-form">     <!--      form values submited  hereeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+				
+					<div class="af-outer af-required">
+						<div class="af-inner">
+							<label for="input-title">Enter Password</label>
+							<input type="password" name="password" id="input-fname"> 
+						</div>
+					</div>
+				
+					<input type="submit" value="Login!" onclick="return(validateForm());" /> 
+					
+				</form>
+			</section>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+if( document.forms["af-form"]["lname"].value == "" )
+   {
+     alert( "Please provide your Last Name!" );
+     document.getElementById("input-lname").focus() ;
+     return false;
+   }
+		  
+		  
+		  
+		var x = document.forms["af-form"]["email_address"].value;
+		var atpos = x.indexOf("@");
+		var dotpos = x.lastIndexOf(".");
+		
+		
+   
+   
+   
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+		document.getElementById("input-email").focus();
+        return false;
+			}
+			
+			
+			<!-- if( document.forms["af-form"]["phonenumber"].value == ""  )
+   {
+     alert( "Please provide your phone number Name!" );
+     document.getElementById("input-phone").focus() ;
+     return false;
+   }
+			
+			
+			 -->
+			
+			
